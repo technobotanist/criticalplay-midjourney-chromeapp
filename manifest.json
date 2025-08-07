@@ -1,0 +1,15 @@
+{
+  "name": "Critical Play Split View",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Kiosk web app with split view for Discord/Midjourney and learning materials.",
+  "app": {
+    "launch": {
+      "local_path": "index.html"
+    }
+  },
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "kiosk_enabled": true
+}
