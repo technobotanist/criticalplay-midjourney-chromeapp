@@ -1,0 +1,9 @@
+html, body {
+  margin: 0; height: 100%; display: flex; overflow: hidden;
+}
+.pane {
+  flex: 1; border: none;
+}
+.divider {
+  width: 5px; background: #666; cursor: col-resize;
+}
