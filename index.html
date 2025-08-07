@@ -2,14 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Critical Play Split View</title>
+  <title>Launch Padlet & Midjourney</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="splitscreen-midjourney-fav.png">
 </head>
-<body>
-  <iframe class="pane" src="https://go.ncsu.edu/acrl-generative-ai" id="leftPane" title="Lesson Portal"></iframe>
-  <div class="divider" id="divider"></div>
-  <iframe class="pane" src="https://www.midjourney.com/imagine" id="rightPane" title="Midjourney"></iframe>
-  <script src="resize.js"></script>
+<body style="background: #f6f8fa; min-height: 100vh; margin: 0; font-family: 'Segoe UI', Arial, sans-serif;">
+  <div style="text-align:center; margin: 12vh 0;">
+    <img src="splitscreen-midjourney-fav.png" alt="App Icon" style="width:64px;height:64px;margin-bottom:2em;" />
+    <h1 style="color:#222; font-size:2.2em; margin-bottom:0.5em;">Launch Padlet & Midjourney</h1>
+    <button onclick="openBothSites()" aria-label="Open Padlet and Midjourney in new tabs" style="padding: 1.5em 3em; font-size: 1.5em; cursor: pointer; background:#4f8cff; color:#fff; border:none; border-radius:8px; box-shadow:0 2px 8px #0001; transition:background 0.2s;">Open Padlet & Midjourney in New Tabs</button>
+    <p style="margin-top:2em; color:#b00; font-size:1.1em; font-weight:bold;">If popups are blocked, please allow them for this site.</p>
+  </div>
+  <script>
+    function openBothSites() {
+      window.open('https://go.ncsu.edu/acrl-generative-ai', '_blank');
+      window.open('https://discord.com/channels/1111736760964235264/1111736827192287312', '_blank');
+    }
+  </script>
 </body>
 </html>
