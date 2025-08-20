@@ -1,1 +1,75 @@
-/* No styles needed. This file is intentionally left blank. */
+body {
+	background: #181a1b;
+	min-height: 100vh;
+	margin: 0;
+	font-family: 'Segoe UI', Arial, sans-serif;
+	overflow: hidden;
+}
+
+#shader-bg {
+	position: fixed;
+	top: 0; left: 0; width: 100vw; height: 100vh;
+	z-index: 0;
+	pointer-events: none;
+	display: block;
+}
+
+.main-content {
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	margin: 12vh 0;
+}
+
+.app-icon {
+	width: 80px;
+	height: 80px;
+	margin-bottom: 2em;
+	box-shadow: 0 4px 32px #0003;
+	border-radius: 16px;
+}
+
+h1 {
+	color: #fff;
+	font-size: 2.8em;
+	margin-bottom: 0.7em;
+	letter-spacing: 0.01em;
+	text-shadow: 0 2px 16px #0008;
+}
+
+.brand-btn {
+	padding: 2em 4em;
+	font-size: 2em;
+	font-weight: bold;
+	cursor: pointer;
+	border: none;
+	border-radius: 16px;
+	margin: 0.5em 0.5em 1.2em 0.5em;
+	box-shadow: 0 4px 24px #0002;
+	transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+	outline: none;
+	color: #181a1b;
+	background: #fff;
+}
+.brand-btn.padlet {
+	background: linear-gradient(90deg, #feca1e 60%, #fff 100%);
+}
+.brand-btn.midjourney {
+	background: linear-gradient(90deg, #ff58a7 60%, #fff 100%);
+}
+.brand-btn.worksheet {
+	background: linear-gradient(90deg, #6ddbae 60%, #fff 100%);
+}
+.brand-btn:hover, .brand-btn:focus {
+	transform: scale(1.06);
+	box-shadow: 0 8px 32px #0004;
+	filter: brightness(1.08);
+}
+
+.popup-warning {
+	margin-top: 2em;
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-shadow: 0 2px 8px #000a;
+}
