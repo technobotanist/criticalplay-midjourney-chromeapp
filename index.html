@@ -13,8 +13,41 @@
     <h1>Critical Play with Generative AI</h1>
     <button class="brand-btn padlet" onclick="window.open('https://go.ncsu.edu/libtech-ai-padlet', '_blank')" aria-label="Open Padlet in new tab">Open Padlet in New Tab</button><br>
     <button class="brand-btn midjourney" onclick="window.open('https://discord.com/channels/1111736760964235264/1111736827192287312', '_blank')" aria-label="Open Midjourney in new tab">Open Midjourney (Discord) in New Tab</button>
-    <button class="brand-btn worksheet" onclick="window.open('https://go.ncsu.edu/libtech-genai-worksheet', '_blank')" aria-label="Open group worksheet in new tab">Open Group Worksheet in New Tab</button>
-    <p class="popup-warning">If popups are blocked, please allow them for this site.</p>
+    <p class="popup-warning" id="studios-hover">A workshop by the NC State University Libraries Studios.
+      <span id="studios-preview" class="studios-preview-popup" style="display:none;">
+        <iframe src="https://www.lib.ncsu.edu/the-studios" title="The Studios Preview" style="width:400px;height:300px;border:none;"></iframe>
+      </span>
+    </p>
+  <style>
+    .studios-preview-popup {
+      position: absolute;
+      z-index: 1000;
+      background: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      border-radius: 8px;
+      padding: 0;
+      margin-top: 8px;
+      left: 0;
+    }
+    .popup-warning {
+      position: relative;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    // Studios preview hover logic
+    const studiosWarning = document.getElementById('studios-hover');
+    const studiosPreview = document.getElementById('studios-preview');
+    if (studiosWarning && studiosPreview) {
+      studiosWarning.addEventListener('mouseenter', (e) => {
+        studiosPreview.style.display = 'block';
+      });
+      studiosWarning.addEventListener('mouseleave', (e) => {
+        studiosPreview.style.display = 'none';
+      });
+    }
+  </script>
   </div>
   <script>
     // Simple performant animated shader background
