@@ -5,6 +5,31 @@
   <title>Critical Play with Generative AI </title>
   <link rel="icon" type="image/png" sizes="32x32" href="splitscreen-midjourney-fav.png">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .studios-btn {
+      display: inline-block;
+      background: #6ddbae;
+      color: #222;
+      border: none;
+      border-radius: 6px;
+      padding: 0.12em 0.48em;
+      font-family: inherit;
+      font-size: 60%;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      margin-left: 0.2em;
+      vertical-align: middle;
+    }
+    .studios-btn:hover, .studios-btn:focus {
+      background: #4ec9a6;
+      color: #111;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <canvas id="shader-bg"></canvas>
@@ -13,41 +38,7 @@
     <h1>Critical Play with Generative AI</h1>
     <button class="brand-btn padlet" onclick="window.open('https://go.ncsu.edu/libtech-ai-padlet', '_blank')" aria-label="Open Padlet in new tab">Open Padlet in New Tab</button><br>
     <button class="brand-btn midjourney" onclick="window.open('https://discord.com/channels/1111736760964235264/1111736827192287312', '_blank')" aria-label="Open Midjourney in new tab">Open Midjourney (Discord) in New Tab</button>
-    <p class="popup-warning" id="studios-hover">A workshop by the NC State University Libraries Studios.
-      <span id="studios-preview" class="studios-preview-popup" style="display:none;">
-        <iframe src="https://www.lib.ncsu.edu/the-studios" title="The Studios Preview" style="width:400px;height:300px;border:none;"></iframe>
-      </span>
-    </p>
-  <style>
-    .studios-preview-popup {
-      position: absolute;
-      z-index: 1000;
-      background: #fff;
-      border: 1px solid #ccc;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-      border-radius: 8px;
-      padding: 0;
-      margin-top: 8px;
-      left: 0;
-    }
-    .popup-warning {
-      position: relative;
-      cursor: pointer;
-    }
-  </style>
-  <script>
-    // Studios preview hover logic
-    const studiosWarning = document.getElementById('studios-hover');
-    const studiosPreview = document.getElementById('studios-preview');
-    if (studiosWarning && studiosPreview) {
-      studiosWarning.addEventListener('mouseenter', (e) => {
-        studiosPreview.style.display = 'block';
-      });
-      studiosWarning.addEventListener('mouseleave', (e) => {
-        studiosPreview.style.display = 'none';
-      });
-    }
-  </script>
+  <p class="popup-warning">A workshop by the <a href="https://www.lib.ncsu.edu/the-studios" target="_blank" rel="noopener noreferrer" class="brand-btn studios-btn">NC State University Libraries Studios</a>.</p>
   </div>
   <script>
     // Simple performant animated shader background
